@@ -17,11 +17,12 @@ ActiveRecord::Schema.define(version: 20160429005152) do
   enable_extension "plpgsql"
 
   create_table "loan_applications", force: :cascade do |t|
-    t.integer  "amount"
-    t.integer  "zip_code"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email_address"
+    t.integer  "amount",        null: false
+    t.integer  "zip_code",      null: false
+    t.integer  "phone_number",  null: false
+    t.string   "first_name",    null: false
+    t.string   "last_name",     null: false
+    t.string   "email_address", null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

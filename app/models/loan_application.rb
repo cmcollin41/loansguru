@@ -1,6 +1,7 @@
 require 'net/http'
 class LoanApplication < ActiveRecord::Base
-  
+  after_create :format_names, :post_to_site
+
   def post_to_site
     uri = URI.parse "https://olps.macfarlanegp.com/leadpost.aspx"
     request = Net::HTTP::Post.new uri.path
@@ -13,4 +14,11 @@ class LoanApplication < ActiveRecord::Base
   def application_xml_packet
     self.to_xml
   end  
+
+  def format_names
+    first = first_name.humanize
+    last = last_name.humanize
+    self.update(first_name: first)
+    self.update(last_name: last)
+  end
 end
