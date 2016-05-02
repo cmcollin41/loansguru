@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+LoanApplication.create({amount: 1000, 
+                        zip_code: 84020,
+                        phone_number: '5555555555',
+                        application_ip: "1.121.10.111",
+                        application_url: "www.example.com",
+                        first_name: "Test",
+                        last_name: "Tester",
+                        email_address: "demo@test.com"
+                        })

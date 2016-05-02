@@ -1,6 +1,6 @@
 require 'net/http'
 class LoanApplication < ActiveRecord::Base
-  after_create :format_names, :post_to_site
+  after_create :format_names
 
   def post_to_site
     uri = URI.parse "https://olps.macfarlanegp.com/leadpost.aspx"
@@ -21,4 +21,8 @@ class LoanApplication < ActiveRecord::Base
     self.update(first_name: first)
     self.update(last_name: last)
   end
+
+  def applicationURL
+    "www.example.com"
+  end  
 end
