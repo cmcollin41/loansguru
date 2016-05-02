@@ -27,6 +27,8 @@ gem 'sidekiq'
 
 gem 'httparty', '~> 0.13.7'
 
+gem 'annotate'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
