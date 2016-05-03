@@ -25,7 +25,9 @@ class LoanApplication < ActiveRecord::Base
   end  
 
   def application_xml_packet
-    self.to_xml
+    packet_hash = self.as_json
+    packet_hash['application_url'] = 'onlineloans.guru'
+    packet_hash.to_xml
   end  
 
   def format_names
@@ -33,7 +35,5 @@ class LoanApplication < ActiveRecord::Base
     last = last_name.humanize
     self.update(first_name: first)
     self.update(last_name: last)
-  end
-
-   
+  end   
 end

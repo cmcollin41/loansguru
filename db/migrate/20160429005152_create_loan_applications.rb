@@ -5,7 +5,6 @@ class CreateLoanApplications < ActiveRecord::Migration
       t.string :amount, null: false
       t.string :application_ip, null: false
       t.string :phone_number, null: false
-      t.string :application_url, null: false
       t.string :first_name, null: false
       t.string :last_name, null: false
       t.string :email_address, null: false
