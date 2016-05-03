@@ -1,0 +1,15 @@
+<%= form_for @loan_application do |f| %>
+  <%= f.label "amount" %>
+  <%= f.text_area :amount %>
+  <%= f.label :zip_code %>
+  <%= f.text_area :zip_code %>
+  <%= f.label :phone_number %>
+  <%= f.text_area :phone_number %>
+  <%= f.label :first_name %>
+  <%= f.text_area :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_area :last_name %>
+  <%= f.label :email_address %>
+  <%= f.text_area :email_address %>
+  <%= f.submit "create application", method: :set_ip_address_and_host_url(@loan_application) %>
+<% end %>
