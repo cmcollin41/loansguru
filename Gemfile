@@ -29,6 +29,7 @@ gem 'httparty', '~> 0.13.7'
 
 gem 'annotate'
 
+gem 'better_errors', '~> 2.1', '>= 2.1.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

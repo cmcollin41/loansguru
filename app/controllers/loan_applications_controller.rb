@@ -6,18 +6,23 @@ class LoanApplicationsController < ApplicationController
 
   def create
     loan_application = LoanApplication.new(application_params)
+    loan_application.application_ip, loan_application.application_url = get_ip_address_and_host_url
+    if loan_application.save
+      redirect_to root_path
+    else
+      render :new
+    end    
   end
   
   private  
 
-  def set_ip_address_and_host_url(application)
+  def get_ip_address_and_host_url
     ip = request.remote_ip
-    url = requst.original_url
-    application.application_ip = ip
-    application.application_url = url
+    url = request.original_url
+    [ip, url]  
   end  
 
   def application_params
-    params.reuire(:loan_application).permit(:amount, :zipcode, :application_id, :application_url :first_name, :last_name, :email)
+    params.require(:loan_application).permit(:amount, :zip_code, :phone_number, :application_ip, :application_url, :first_name, :last_name, :email_address)
   end  
 end
