@@ -21,6 +21,6 @@ class LoanApplicationsController < ApplicationController
   end  
 
   def application_params
-    params.require(:loan_application).permit(:amount, :zip_code, :phone_number, :application_ip, :first_name, :last_name, :email_address)
+    params.require(:loan_application).permit(:amount, :zip_code, :street_address, :city, :state, :phone_number, :application_ip, :first_name, :last_name, :email_address)
   end  
 end
