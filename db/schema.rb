@@ -18,6 +18,9 @@ ActiveRecord::Schema.define(version: 20160429005152) do
 
   create_table "loan_applications", force: :cascade do |t|
     t.integer  "zip_code",       null: false
+    t.string   "street_address", null: false
+    t.string   "city",           null: false
+    t.string   "state",          null: false
     t.string   "amount",         null: false
     t.string   "application_ip", null: false
     t.string   "phone_number",   null: false
