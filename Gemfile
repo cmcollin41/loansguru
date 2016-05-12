@@ -15,6 +15,7 @@ gem 'httparty', '~> 0.13.7'
 gem 'annotate'
 gem 'better_errors', '~> 2.1', '>= 2.1.1'
 
+# bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
