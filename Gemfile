@@ -10,7 +10,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sidekiq'
+
 gem 'httparty', '~> 0.13.7'
 gem 'annotate'
 gem 'better_errors', '~> 2.1', '>= 2.1.1'
