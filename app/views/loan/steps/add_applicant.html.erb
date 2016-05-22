@@ -1,0 +1,33 @@
+<div class="container landingPage">
+	<%= simple_form_for(@loan_application, url: wizard_path, method: :put) do |f| %>
+	  <div class="row">
+			<div class="col-md-6 col-md-offset-3">
+	  		<div class="panel panel-default">
+	  			<div class="panel-body">
+			  		 <div class="form-group col-md-12">
+			  			<i class="fa fa-check-circle secondary" aria-hidden="true"></i>
+			  			<i class="fa fa-circle primary" aria-hidden="true"></i>
+			  			<i class="fa fa-circle-o primary" aria-hidden="true"></i>
+			  			<i class="fa fa-circle-o primary" aria-hidden="true"></i>
+			  		</div>
+			  		<h3 class="center formHeader">Personal Information</h3>
+			  		<hr>
+			      <%= f.input :Address1, label: 'Street Address', placeholder: "Street Address", error: "Sorry, this field can't be blank", wrapper_html: { class: 'col-md-12' } %>
+			      <%= f.input :City, label: "City", placeholder: "City", error: "Sorry, this field can't be blank", wrapper_html: { class: 'col-md-8' } %>
+			      <%= f.input :State, label: "ST", collection: us_states, selected: "ST", error: "Sorry, this field can't be blank", wrapper_html: { class: 'col-md-4' } %>
+			      <%= f.input :HomePhone, label: "Primary Phone", placeholder: "Primary Phone", error: "Please input a proper 10 digit phone number", wrapper_html: { class: 'col-md-6' } %>
+			      <%= f.input :SSN, label: "Social Security Number", placeholder: "Social Security Number", error: "Sorry, this field can't be blank", wrapper_html: { class: 'col-md-6' } %>
+			      <%= f.input :DOB, label: "Date of Birth", placeholder: "Date of Birth", error: "Sorry, this field can't be blank", wrapper_html: { class: 'col-md-12' } %>
+			      <%= f.input :IsMilitary, label: "Are You Military?", placeholder: "Are You Military", wrapper_html: { class: 'col-md-12' } %>
+			      <div class="form-group col-md-12">
+			      	<%= f.submit "Next Step", class: "btn btn-primary" %>
+			      </div>
+			      <div class="form-group col-md-12 center">
+					    <i class="fa fa-lock fa-1x" aria-hidden="true"></i>
+					  </div>
+	    		</div>
+	    	</div>
+	    </div>
+	  </div>
+	<% end %>
+</div>

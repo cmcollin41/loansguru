@@ -15,6 +15,9 @@ gem 'httparty', '~> 0.13.7'
 gem 'annotate'
 gem 'better_errors', '~> 2.1', '>= 2.1.1'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'font-awesome-rails'
+gem 'simple_form'
+gem 'wicked'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc

@@ -10,17 +10,62 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
 
 
+$ltGrey: #e0e0e0;
+$grey: #bdbdbd;
+$font-size-base: 16px;
+$navbar-default-bg: #fff;
+$navbar-default-border: none;
+$navbar-default-link-color: #1a237e;
+$brand-primary: #1a237e;
+
+$font-family-sans-serif: "Roboto", Roboto, sans-serif;
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700); 
+
+@import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+
+.center{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.formHeader{
+	margin-bottom: 25px;
+}
 
 .marginTopXL{
 	margin-top: 100px;
 }
 
+
+.footer{
+	background-color: $ltGrey;
+	color: $grey;
+}
+
+.primary{
+	color: #1a237e;
+}
+
+.secondary{
+	color: #64ffda;
+}
+
+.landingPage{
+	min-height: calc(100vh - 60px);
+	//height: 1000px;
+	.landingPage:before{
+		content: "";
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+}
 

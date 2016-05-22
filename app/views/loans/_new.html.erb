@@ -1,0 +1,48 @@
+<div class="form col-md-8 col-md-offset-4 marginTopXL">
+<!--   <div class="panel panel-default">
+    <div class="panel-body"> -->
+    <%= simple_form_for @loan_application do |f| %>
+      <div class="row">
+          <%= f.input :RequestedAmount, label: 'Amount Needed', placeholder: "Amount Needed", error: "Please select an amount between $1-5000", wrapper_html: { class: 'col-md-6' } %>
+          <%= f.input :Zip, label: "Zip Code", placeholder: "Zip Code", error: "Please input a proper zip code", wrapper_html: { class: 'col-md-6' } %>
+          <%= f.input :FirstName, label: "First Name", placeholder: "First Name", error: "Sorry, this field can't be blank", wrapper_html: { class: 'col-md-6' } %>
+          <%= f.input :LastName, label: "Last Name",placeholder: "Last Name", error: "Sorry, this field can't be blank", wrapper_html: { class: 'col-md-6' } %>
+          <%= f.input :Email, label: "Email", placeholder: "Email", error: "Please input a proper email address", wrapper_html: { class: 'col-md-12' } %>
+
+
+          <%= f.input :Address1, label: "Street Address", placeholder: "Street Address", error: "Sorry, this field can't be blank", wrapper_html: { class: 'col-md-12' } %>
+          <%= f.input :City, label: "City", placeholder: "City", error: "Sorry, this field can't be blank", wrapper_html: { class: 'col-md-10' } %>
+          <%= f.input :State, label: "ST", placeholder: "ST", error: "Sorry, this field can't be blank", wrapper_html: { class: 'col-md-2' } %>
+          <%= f.input :HomePhone, label: "Home Phone", placeholder: "Home Phone", error: "Please input a proper 10 digit phone number", wrapper_html: { class: 'col-md-12' } %>
+          <%= f.input :SSN, label: "SSN", placeholder: "Social Security Number", error: "Please input a proper 9 digit social security number", wrapper_html: { class: 'col-md-12' } %>
+          <%= f.input :DOB, label: "Date of Birth", placeholder: "Date of Birth", wrapper_html: { class: 'col-md-12' } %>
+          <%= f.input :IsMilitary, label: "Are You Military", placeholder: "Are You Military?", wrapper_html: { class: 'col-md-12' } %>
+
+          <%= f.input :EmployerName, label: "Employer Name", placeholder: "Employer Name", wrapper_html: { class: 'col-md-12' } %>
+          <%= f.input :WorkPhone, label: "Work Phone", placeholder: "Work Phone", wrapper_html: { class: 'col-md-12' } %>
+          <%= f.input :PayDay1, label: "Upcoming Payday", placeholder: "Upcoming Payday", wrapper_html: { class: 'col-md-4' } %>
+          <%= f.input :PayDay2, label: "Next Upcoming Payday", placeholder: "Next Upcoming Payday", wrapper_html: { class: 'col-md-4' } %>
+          <%= f.input :PayFrequency, collection: LoanApplication.PayFrequencies.keys.to_a, label: "Pay Frequency", placeholder: "Pay Frequency", wrapper_html: { class: 'col-md-4' } %>
+          <%= f.input :MonthlyIncome, label: "Monthly Income", placeholder: "Monthly Income", wrapper_html: { class: 'col-md-6' } %>
+          <%= f.input :IncomeType, collection: LoanApplication.IncomeTypes.keys.to_a, label: "Income Type", placeholder: "Income Type", wrapper_html: { class: 'col-md-6' } %>
+          <%= f.input :RoutingNumber, label: "Routing Number", placeholder: "Routing Number", wrapper_html: { class: 'col-md-12' } %>
+          <%= f.input :AccountNumber, label: "Account Number", placeholder: "Account Number", wrapper_html: { class: 'col-md-12' } %>
+          <%= f.input :AccountType, collection: LoanApplication.AccountTypes.keys.to_a, label: "Account Type", placeholder: "Account Type", wrapper_html: { class: 'col-md-12' } %>
+          <%= f.input :DirectDeposit, label: "Direct Deposit", placeholder: "Direct Deposit", wrapper_html: { class: 'col-md-12' } %>
+          <div class="form-group col-md-12">
+            <%= f.submit "Submit Application", class: "btn btn-primary" %>
+          </div>
+      </div>
+      <% end %>
+<!--     </div>
+  </div> -->
+</div>
+
+<!-- <div class="form-group">
+  <%#= f.label :LeadID %>
+  <%#= f.text_field :LeadID, class: "form-control" %>
+</div> -->
+<!-- <div class="form-group">
+  <%#= f.label :Sub1 %>
+  <%#= f.text_field :Sub1, class: "form-control" %>
+</div> -->

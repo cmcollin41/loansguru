@@ -1,0 +1,30 @@
+<div class="container landingPage">
+	<%= simple_form_for(@loan_application, url: wizard_path, method: :put) do |f| %>
+	  <div class="row">
+			<div class="col-md-6 col-md-offset-3">
+	  		<div class="panel panel-default">
+	  			<div class="panel-body">
+			  		<div class="form-group col-md-12">
+			  			<i class="fa fa-check-circle secondary" aria-hidden="true"></i>
+			  			<i class="fa fa-check-circle secondary" aria-hidden="true"></i>
+			  			<i class="fa fa-check-circle secondary" aria-hidden="true"></i>
+			  			<i class="fa fa-circle primary" aria-hidden="true"></i>
+			  		</div>
+						<h3 class="center formHeader">Banking Information</h3>
+						<hr>
+			      <%= f.input :RoutingNumber, label: "Routing Number", placeholder: "Routing Number", error: "Sorry, please input a proper routing number", wrapper_html: { class: 'col-md-12' } %>
+		        <%= f.input :AccountNumber, label: "Account Number", placeholder: "Account Number", error: "Sorry, please input a proper account number", wrapper_html: { class: 'col-md-12' } %>
+		        <%= f.input :AccountType, collection: Loan.AccountTypes.keys.to_a, selected: Loan.AccountTypes.first, label: "Account Type", placeholder: "Account Type", wrapper_html: { class: 'col-md-12' } %>
+		        <%= f.input :DirectDeposit, label: "Direct Deposit", placeholder: "Direct Deposit", wrapper_html: { class: 'col-md-12' } %>
+			      <div class="form-group col-md-12">
+			      	<%= f.submit "Next Step", class: "btn btn-primary" %>
+			      </div>
+			     	<div class="form-group col-md-12 center">
+					    <i class="fa fa-lock fa-1x" aria-hidden="true"></i>
+					  </div>
+			    </div>
+	    	</div>
+	    </div>
+	  </div>
+	<% end %>
+</div>

@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   
 
-  resources :loan_applications
-  root "pages#index"
+  resources :loans, only: [:new, :create, :show, :index] do
+    resources :step, only: [:show, :update], controller: 'loan/steps'
+  end
+  
+  get 'thankyou' => 'pages#thankyou'
+
+  root "loans#new"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
