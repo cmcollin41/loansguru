@@ -90,11 +90,10 @@ class Loan < ActiveRecord::Base
   enum AccountType:  [ :CHECKING, :SAVINGS ]
 
 
-  def post_to_site
-           
+  def post_to_site 
       uri = "https://olps.macfarlanegp.com/leadpost.aspx"
       request = HTTParty.post uri, :body => application_xml_packet, :headers => {'Content-type' => 'text/xml'}
-      puts "\n\n\n\n\n\n#{request.response.body}\n\n\n\n\n\n\n\n\n"
+      puts "\n\n\n\n\n\n#{request}\n\n\n\n\n\n\n\n\n"
   end  
 
   def application_xml_packet
